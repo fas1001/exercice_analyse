@@ -1,0 +1,85 @@
+---
+format:
+  pdf:
+    documentclass: article
+    geometry: 
+      - margin=2.5cm
+    fontsize: 12pt
+    mainfont: "TeX Gyre Termes"
+    header-includes: |
+      \usepackage[french]{babel}
+      \usepackage{fancyhdr}
+      \usepackage{lipsum}  
+      \pagestyle{fancy}
+      \fancyhf{}
+      \fancyhead[R]{\thepage}
+      \renewcommand{\headrulewidth}{0pt}
+      \makeatletter
+      \renewcommand\section{\@startsection{section}{1}{\z@}
+        {-3.5ex \@plus -1ex \@minus -.2ex}
+        {2.3ex \@plus.2ex}
+        {\normalfont\Large\bfseries\centering}}
+      \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}
+        {-3.25ex\@plus -1ex \@minus -.2ex}
+        {-1em}
+        {\normalfont\normalsize\bfseries}}
+      \makeatother
+      \pagenumbering{arabic}
+      \pagestyle{empty}
+      \AtBeginDocument{
+        \thispagestyle{empty}
+        \clearpage
+        \pagestyle{empty}
+        \clearpage
+        \pagestyle{fancy}
+        \addtocounter{page}{1}
+      }
+    fig-pos: "H"
+    toc: false
+bibliography: references.bib
+csl: https://raw.githubusercontent.com/citation-style-language/styles/master/chicago-author-date.csl
+editor: 
+  markdown: 
+    wrap: none
+---
+
+\begin{titlepage}
+  \newpage{}
+  \let\footnotesize\small{}
+  \let\footnoterule\relax{}
+  \let\footnote\thanks{}
+
+  \baselineskip=1.4\baselineskip{}
+
+  \begin{center}
+    \setcounter{page}{1}
+    \includegraphics[height=20mm,keepaspectratio=true]{img/UdeM_CoA.png}
+    \vfil{}
+    {\fontsize{17.28}{14}\selectfont \textbf{Titre}}
+    \vfil{}
+    \textbf{Nom de l'auteur} \\
+    Ni de l'auteur
+    \vfil{}
+    Nom du cours \\ Numéro du cours
+    \vfil{}
+    Présenté à:\\
+    \textbf{Professeur} \\
+    \vfil{}
+    Département de votre département \\Faculté de votre faculté \\Université de Montréal
+    \vfil{}
+    \vfil{}
+    Montréal, Canada \\
+    \vfil{}
+    \copyright{} Nom de l'auteur, \today{}
+  \end{center}
+\end{titlepage}
+
+# Analyse
+
+## Analyse factorielle
+
+![Analyse factorielle](../../results/figures/redneck_scale.png){width=100%}
+
+## Régression
+
+{{< include ../../results/tables/reg_table.md >}}
