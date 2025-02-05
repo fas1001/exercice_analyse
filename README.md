@@ -4,13 +4,7 @@ Ce projet guide vous permettra d'explorer l'analyse factorielle exploratoire et 
 
 ## Prérequis
 
-Avant de commencer, assurez-vous d'avoir installé :
-
-1. R (version 4.0.0 ou supérieure)
-2. RStudio (dernière version recommandée)
-3. Les packages R nécessaires
-
-Pour installer les packages requis, exécutez les commandes suivantes dans R :
+Avant de commencer, assurez-vous d'avoir installé les packages R nécessaires.
 
 ```r
 # Installation des packages CRAN
@@ -85,16 +79,10 @@ Le projet se déroule en quatre étapes principales, chacune correspondant à un
 git clone https://github.com/fas1001/exercice_factor_analysis.git
 ```
 
-2. Dans RStudio, ouvrez le projet en cliquant sur le fichier `.Rproj`
+2. Dans RStudio, créez un `.Rproj` dans le dossier cloné
 
-3. Créez les sous-dossiers nécessaires dans le dossier `data/` :
-```bash
-mkdir -p data/raw data/clean
-```
 
-4. Placez vos données brutes dans le dossier `data/raw/`
-
-5. Exécutez les scripts dans l'ordre (0 à 3)
+3. Exécutez les scripts dans l'ordre (0 à 3)
 
 ## Rapport
 
@@ -108,8 +96,3 @@ Un template de rapport Quarto est fourni dans le dossier `docs/report/`. Pour le
 Si vous rencontrez des difficultés :
 - Consultez les commentaires dans les scripts R
 - Posez vos questions sur le canal Slack du cours
-- Venez aux heures de consultation
-
-## Note sur les données
-
-Les données utilisées dans cet exercice ne sont pas incluses dans le répertoire GitHub. Vous les recevrez séparément via Studium.
