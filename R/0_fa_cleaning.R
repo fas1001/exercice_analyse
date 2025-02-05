@@ -55,6 +55,13 @@ df_clean$lifestyle_guns_number_scale[df$lifestyle_guns_number == "2-4"] <- 2 / 3
 df_clean$lifestyle_guns_number_scale[df$lifestyle_guns_number == "5+"] <- 3 / 3
 table(df_clean$lifestyle_guns_number_scale)
 
+# Variable de pickup
+table(df$lifestyle_prius) 
+df_clean$lifestyle_pickup_scale <- NA
+df_clean$lifestyle_pickup_scale[df$lifestyle_prius == "Pickup truck"] <- 1
+df_clean$lifestyle_pickup_scale[df$lifestyle_prius != "Pickup truck"] <- 0
+table(df_clean$lifestyle_pickup_scale)
+
 # Variable de revenu
 table(df$ses_income)
 df_clean$ses_income <- NA
